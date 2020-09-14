@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proyecto.MainPage">
+
+
+    <ScrollView Orientation="Vertical" BackgroundColor="White">
+
+
+        <Grid BackgroundColor="White" Margin="10">
+       
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto">  </RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+           
+            
+        
+            <Frame Grid.Row="0" BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Reconocimiento de emociones" HorizontalTextAlignment="Center" TextColor="White" FontSize="30" FontAttributes="Bold"/>
+            </Frame>
+        
+
+                <Label Grid.Row="1" Text="Para comenzar solo debe tomarse una foto y nuesto sistema reconozera su emocion" FontSize="17" TextColor="Black"  />
+            <Image x:Name="Foto"  Grid.Row="2"></Image>
+            <Button  HorizontalOptions="Center" ImageSource="IconCamera.png"  FontAttributes="Bold" x:Name="takePhoto"  TextColor="White" BackgroundColor="#116EFF" Grid.Row="3" CornerRadius="20" Text="Tomar foto" >
+
+                </Button>
+
+
+
+            <Button  ImageSource="atencion.png" HorizontalOptions="Center" FontAttributes="Bold"  Grid.Row="4"  Clicked="SubirArchivo_Clicked" x:Name="SubirArchivo" TextColor="White" BackgroundColor="#116EFF"  CornerRadius="20" Text="Reconocer emocion" >
+
+                 </Button>
+            
+
+            <Label x:Name="Emocionlabel" Grid.Row="5"  TextColor="Black" FontSize="17">
+                
+            </Label>
+            <StackLayout Orientation="Horizontal" Grid.Row="6">
+                <Label TextColor="Black" Text="url" FontSize="17" FontAttributes="Bold">
+                    
+                </Label>
+                <Entry TextColor="Black"  x:Name="urlTxt" HorizontalOptions="FillAndExpand">
+                    
+                </Entry>
+            </StackLayout>
+            
+        
+        </Grid>
+    </ScrollView>
+</ContentPage>
