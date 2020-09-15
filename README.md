@@ -44,7 +44,9 @@ _Instalacion de Flask-ngrok_
 
 ![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/flaskngrok.PNG)
 
+_Instalacion de numpy_
 
+![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/Numpy.PNG)
 
 
 
