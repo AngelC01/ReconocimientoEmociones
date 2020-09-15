@@ -54,9 +54,11 @@ _En este punto nos tomaremos foto usando python para esto nos vamos a la carpeta
 
 _En la lineas 5 6 7 8 estan las emociones para comenzar desconmetamos la emocion que vamos a guardar(capturandoRostro.py toma fotos y las guarda en un carpeta segun la variable emocion)_ 
 
+_La variable dataPath es la ruta donde se guardara la carpeta data con las fotos (recomendacion usar la ruta de la carpeta entrenamiento añadiendole data como se muestra la imagen)_
+
 ![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/EmocionCaptura.PNG)
 
-_En este caso vamos a tomarnos fotos para la emocion feclidad
+
 
 
 
