@@ -9,6 +9,7 @@ _Para tener el proyecto unicamente descargalo desde mi repositorio o si tienes c
 ### Pre-requisitos 📋
 
 _Visual studio code_
+
 _Pyhton 3.8.5_
 
 ### Instalación 🔧
@@ -21,6 +22,22 @@ _pip install open-cv-python_
 
 ![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/image.png)
 
+_Ahora instalamos Flask
+
 _pip install Flask_    
 
 ![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/installFlask.PNG)
+
+_Instalacion de flask_sqlalchemy_
+
+_pip install Flask-SQLAlchemy_
+
+![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/FlaskAchemy.PNG)
+
+
+
+
+
+
+
+
