@@ -48,5 +48,9 @@ _Instalacion de numpy_
 
 ![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/Numpy.PNG)
 
+### Creando la carpeta data 🔧
+
+_En este punto nos tomaremos foto usando python para esto nos vamos a la carpeta entrenamiento, abrimos el archivo capturandoRostro.py con visual studio code_
+
 
 
