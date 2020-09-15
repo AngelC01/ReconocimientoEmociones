@@ -3,55 +3,141 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="proyecto.MainPage">
 
+    <AbsoluteLayout>
+        <ContentView
+              AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                      AbsoluteLayout.LayoutFlags="All" BackgroundColor="White">
+            <ScrollView Orientation="Vertical" BackgroundColor="White">
 
-    <ScrollView Orientation="Vertical" BackgroundColor="White">
 
+                <Grid BackgroundColor="White" Margin="10">
 
-        <Grid BackgroundColor="White" Margin="10">
-       
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto">  </RowDefinition>
-                <RowDefinition Height="auto"></RowDefinition>
-                <RowDefinition Height="auto"></RowDefinition>
-                <RowDefinition Height="auto"></RowDefinition>
-                <RowDefinition Height="auto"></RowDefinition>
-                <RowDefinition Height="auto"></RowDefinition>
-                <RowDefinition Height="auto"></RowDefinition>
-            </Grid.RowDefinitions>
-           
-            
-        
-            <Frame Grid.Row="0" BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-                <Label Text="Reconocimiento de emociones" HorizontalTextAlignment="Center" TextColor="White" FontSize="30" FontAttributes="Bold"/>
-            </Frame>
-        
-
-                <Label Grid.Row="1" Text="Para comenzar solo debe tomarse una foto y nuesto sistema reconozera su emocion" FontSize="17" TextColor="Black"  />
-            <Image x:Name="Foto"  Grid.Row="2"></Image>
-            <Button  HorizontalOptions="Center" ImageSource="IconCamera.png"  FontAttributes="Bold" x:Name="takePhoto"  TextColor="White" BackgroundColor="#116EFF" Grid.Row="3" CornerRadius="20" Text="Tomar foto" >
-
-                </Button>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
 
 
 
-            <Button  ImageSource="atencion.png" HorizontalOptions="Center" FontAttributes="Bold"  Grid.Row="4"  Clicked="SubirArchivo_Clicked" x:Name="SubirArchivo" TextColor="White" BackgroundColor="#116EFF"  CornerRadius="20" Text="Reconocer emocion" >
+                    <Frame Grid.Row="0" BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                        <Label Text="Reconocimiento de emociones" HorizontalTextAlignment="Center" TextColor="White" FontSize="30" FontAttributes="Bold"/>
+                    </Frame>
 
-                 </Button>
-            
 
-            <Label x:Name="Emocionlabel" Grid.Row="5"  TextColor="Black" FontSize="17">
-                
-            </Label>
-            <StackLayout Orientation="Horizontal" Grid.Row="6">
-                <Label TextColor="Black" Text="url" FontSize="17" FontAttributes="Bold">
-                    
-                </Label>
-                <Entry TextColor="Black"  x:Name="urlTxt" HorizontalOptions="FillAndExpand">
-                    
-                </Entry>
+                    <Label Grid.Row="1" Text="Para comenzar solo debe tomarse una foto y luego pulsar el boton reconocer emocion" FontSize="17" TextColor="Black"  />
+                    <Image x:Name="Foto"  Grid.Row="2"></Image>
+                    <Button  HorizontalOptions="Center" ImageSource="IconCamera.png"  FontAttributes="Bold" x:Name="takePhoto"  TextColor="White" BackgroundColor="#116EFF" Grid.Row="3" CornerRadius="20" Text="Tomar foto" >
+
+                    </Button>
+
+
+
+                    <Button  ImageSource="atencion.png" HorizontalOptions="Center" FontAttributes="Bold"  Grid.Row="4"  Clicked="SubirArchivo_Clicked" x:Name="SubirArchivo" TextColor="White" BackgroundColor="#116EFF"  CornerRadius="20" Text="Reconocer emocion" >
+
+                    </Button>
+
+
+                    <Label x:Name="Emocionlabel" Grid.Row="5"  TextColor="Black" FontSize="17">
+
+                    </Label>
+                    <StackLayout Orientation="Horizontal" Grid.Row="6">
+                        <Label Margin="5" TextColor="Black" Text="url" FontSize="17" FontAttributes="Bold">
+
+                        </Label>
+                        <Entry BackgroundColor="Aqua" TextColor="Black"  x:Name="urlTxt" HorizontalOptions="FillAndExpand">
+
+                        </Entry>
+                    </StackLayout>
+
+
+                </Grid>
+            </ScrollView>
+        </ContentView>
+
+        <ContentView x:Name="modal"   AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                      AbsoluteLayout.LayoutFlags="All" 
+                         BackgroundColor="#C0808080"
+                        IsVisible="False"
+                        >
+
+
+
+            <StackLayout Orientation="Vertical" 
+                   BackgroundColor="Transparent" 
+                   WidthRequest="600"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" 
+                   Margin="0,20,0,0" >
+                <StackLayout.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double" Android="100" iOS="35" WinPhone="145" />
+                </StackLayout.HeightRequest>
+
+                <Label FontAttributes="Bold" FontSize="17" TextColor="Black" Text="Analizando Rostro..." HorizontalOptions="Center"/>
+
+                <ActivityIndicator IsVisible="true" IsRunning="true"
+                       Color="Red"  Scale="1.5"     BackgroundColor="Transparent">
+
+                </ActivityIndicator>
+
+
+
             </StackLayout>
-            
-        
-        </Grid>
-    </ScrollView>
+
+
+
+
+
+
+        </ContentView>
+
+
+
+
+        <ContentView x:Name="modal2"   AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                      AbsoluteLayout.LayoutFlags="All" 
+                         BackgroundColor="White"
+                        IsVisible="False"
+                        >
+
+
+            <ScrollView>
+                
+                
+           
+                <StackLayout Orientation="Vertical" 
+                       BackgroundColor="White" 
+                       WidthRequest="600"
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Start" 
+                       Margin="0,20,0,0" >
+                    <StackLayout.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double" Android="400" iOS="35" WinPhone="145" />
+                    </StackLayout.HeightRequest>
+
+                    <Label x:Name="EmocionModalLabel" FontAttributes="Bold" FontSize="25" TextColor="Black" Text="Su emocion es: " HorizontalOptions="Center"/>
+
+                    <Image HeightRequest="250" WidthRequest="250" x:Name="ImageEmocion" >
+                    
+                    </Image>
+                    <Button BackgroundColor="#116EFF" Padding="10" Margin="10" x:Name="Aceptar" CornerRadius="25" IsEnabled="True" Text="Aceptar" TextColor="White" HorizontalOptions="Center"  >
+                    
+                    </Button>
+
+
+                </StackLayout>
+
+
+
+            </ScrollView>
+
+
+        </ContentView>
+
+
+    </AbsoluteLayout>
 </ContentPage>

@@ -47,14 +47,21 @@ namespace proyecto
                     return stream;
                 });
             };
+            Aceptar.Clicked += Aceptar_Clicked;
 
         }
 
-      
+        private void Aceptar_Clicked(object sender, EventArgs e)
+        {
+            modal2.IsVisible = false;
+        }
+
         private async void HacerPostAsync()
 		{
-            
-           
+
+
+
+            modal.IsVisible = true;
         // code here to assign image to _image
             var content = new MultipartFormDataContent();
             content.Add(new StreamContent(_image.GetStream()), "\"pic\"", $"\"album_camara\"");
@@ -71,14 +78,27 @@ namespace proyecto
             emociones = JsonConvert.DeserializeObject<Emociones>(remotePath);
 			if (emociones.Error)
 			{
+                modal.IsVisible = false;
+                if (emociones.Errormsg.Equals("No se encontro ningun rostro"))
+                {
+                    modal2.IsVisible = true;
+                    ImageEmocion.Source = "ErrorRostro";
+                    EmocionModalLabel.Text = "Error: " + emociones.Errormsg;
 
-                DisplayAlert("Error"," :( "+ emociones.Errormsg, "Aceptar");
+                }
+                //DisplayAlert("Error"," :( "+ emociones.Errormsg, "Aceptar");
 
 			}
 			else
 			{
-                Emocionlabel.Text = "Su emocionn es: " + emociones.Emocion;
 
+
+                ImageEmocion.Source = emociones.Emocion;
+                EmocionModalLabel.Text = "Su emocion es: " + emociones.Emocion;
+                modal.IsVisible = false;
+                modal2.IsVisible = true;
+               // Emocionlabel.Text = "Su emocionn es: " + emociones.Emocion;
+                
 
             }
 
@@ -88,14 +108,26 @@ namespace proyecto
 		{
 			if (Foto.Source == null)
 			{
-                DisplayAlert("Error", "Debe tomarse una foto", "OK");
+                DisplayAlert("Error", "Debe tomarse una foto", "Aceptar");
 
 			}
 			else
 			{
-                HacerPostAsync();
+                try
+                {
+
+                    HacerPostAsync();
+                }catch(Exception g)
+                {
+                    DisplayAlert("Error", "Ocurrio un Error inesperado intentelo de nuevo", "Aceptar");
+
+
+                }
+
             }
            
 		}
-	}
+
+     
+    }
 }
