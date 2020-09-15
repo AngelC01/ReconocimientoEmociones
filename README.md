@@ -34,7 +34,7 @@ _pip install Flask-SQLAlchemy_
 
 ![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/FlaskAchemy.PNG)
 
-_Instalacion de Werkzeug
+_Instalacion de Werkzeug_
 
 _pip install Werkzeug_
 
