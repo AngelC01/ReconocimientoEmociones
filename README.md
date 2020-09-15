@@ -40,6 +40,10 @@ _pip install Werkzeug_
 
 ![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/Werkzeug.PNG)
 
+_Instalacion de Flask-ngrok_
+
+![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/flaskngrok.PNG)
+
 
 
 
