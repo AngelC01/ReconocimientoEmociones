@@ -9,6 +9,9 @@ _Para tener el proyecto unicamente descargalo desde mi repositorio o si tienes c
 ### Pre-requisitos 📋
 
 _Instalar visual studio code_
+
 _Instalar OpenCv_
+
 _Instalar flask_sqlalchemy_
+
 
