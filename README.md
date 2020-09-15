@@ -17,4 +17,10 @@ _Para comenzar debemos instalar opencv para ello vamos al terminal de consola en
 
 _Usamos el comando Pip install  "Libreria que vamos a instalar"_
 
+_pip install open-cv-python_
+
 ![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/image.png)
+
+_pip install Flask_    
+
+![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/installFlask.PNG)
