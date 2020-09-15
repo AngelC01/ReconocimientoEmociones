@@ -22,7 +22,7 @@ _pip install open-cv-python_
 
 ![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/image.png)
 
-_Ahora instalamos Flask
+_Ahora instalamos Flask_
 
 _pip install Flask_    
 
@@ -34,8 +34,11 @@ _pip install Flask-SQLAlchemy_
 
 ![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/FlaskAchemy.PNG)
 
+_Instalacion de Werkzeug
 
+_pip install Werkzeug_
 
+![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/Werkzeug.PNG)
 
 
 
