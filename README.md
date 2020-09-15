@@ -8,10 +8,13 @@ _Para tener el proyecto unicamente descargalo desde mi repositorio o si tienes c
 
 ### Pre-requisitos 📋
 
-_Instalar visual studio code_
+_Visual studio code_
+_Pyhton 3.8.5_
 
-_Instalar OpenCv_
+### Instalación 🔧
 
-_Instalar flask_sqlalchemy_
+_Para comenzar debemos instalar opencv para ello vamos al terminal de consola en este caso tengo windows_
 
+_Usamos el comando Pip install  "Libreria que vamos a instalar"_
 
+![Alt text](https://raw.githubusercontent.com/AngelC01/Imagenes/master/image.png)
